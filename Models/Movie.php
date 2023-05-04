@@ -7,7 +7,7 @@ class Movie{
 
 
 //creazione funzione 
-    public function __construct(string $title,string $vote,array $genres){
+    public function __construct($title,$vote,$genres){
         $this->title = $title;
         $this->vote = $vote;
         $this->genres = $genres;
@@ -16,14 +16,6 @@ class Movie{
     public function getInfo(){
         return $this->title . '</br>' . $this->vote . '</br>' . $this->genres;
     }
-//funzione per generi
-    public function getGenres(){
-        $generi='';
-        foreach($this->genres as $genre){
-            $generi .=$genre;
-        }
-        return $generi;
-    }    
 
 }
 
